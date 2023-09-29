@@ -47,7 +47,7 @@
   var currentPath = window.location.pathname;
   
   // Check if the current domain contains "corestore.shop" and the path is "/index.php/boundbooks/fill_sectionC_2020"
-  if (currentDomain.includes("corestore.shop") && currentPath === "/index.php/boundbooks/fill_sectionC_2020") {
+  if (currentDomain.includes("corestore.shop") && currentPath.includes("/index.php/boundbooks/fill_sectionC_2020")) {
     
     // Get the input box by its ID
     var inputBox = document.getElementById("transaction_number_27b");
