@@ -44,34 +44,40 @@
     return listItem;
   }
 
-  // Get the input box by its ID
-  var inputBox = document.getElementById("transaction_number_27b");
-
-  // Check if the input box exists and set its background color to red if the text is longer than 9 characters
-  if (inputBox) {
-    inputBox.addEventListener("input", function() {
-      if (inputBox.value.length != 9) {
-        inputBox.style.backgroundColor = "red";
-      } else {
-        inputBox.style.backgroundColor = "";
-      }
-    });
-  }
-
-  // Get the date input box by its ID
-  var dateInputBox = document.getElementById("identification_exp_date_18a");
-
-  // Check if the date input box exists and set its background color to red if the date is before the current date
-  if (dateInputBox) {
-    dateInputBox.addEventListener("input", function() {
-      var currentDate = new Date();
-      var enteredDate = new Date(dateInputBox.value);
-
-      if (enteredDate < currentDate) {
-        dateInputBox.style.backgroundColor = "red";
-      } else {
-        dateInputBox.style.backgroundColor = "";
-      }
-    });
+  var currentPath = window.location.pathname;
+  
+  // Check if the current domain contains "corestore.shop" and the path is "/index.php/boundbooks/fill_sectionC_2020"
+  if (currentDomain.includes("corestore.shop") && currentPath === "/index.php/boundbooks/fill_sectionC_2020") {
+    
+    // Get the input box by its ID
+    var inputBox = document.getElementById("transaction_number_27b");
+  
+    // Check if the input box exists and set its background color to red if the text is not 9 characters
+    if (inputBox) {
+      inputBox.addEventListener("input", function() {
+        if (inputBox.value.length != 9) {
+          inputBox.style.backgroundColor = "red";
+        } else {
+          inputBox.style.backgroundColor = "";
+        }
+      });
+    }
+  
+    // Get the date input box by its ID
+    var dateInputBox = document.getElementById("identification_exp_date_18a");
+  
+    // Check if the date input box exists and set its background color to red if the date is before the current date
+    if (dateInputBox) {
+      dateInputBox.addEventListener("input", function() {
+        var currentDate = new Date();
+        var enteredDate = new Date(dateInputBox.value);
+  
+        if (enteredDate < currentDate) {
+          dateInputBox.style.backgroundColor = "red";
+        } else {
+          dateInputBox.style.backgroundColor = "";
+        }
+      });
+    }
   }
 })();
