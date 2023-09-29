@@ -19,13 +19,13 @@
       sidebarMenu.appendChild(manage4473ListItem);
     } else {
       // Create the sidebar menu if it doesn't exist
-      sidebarMenu = document.createElement("ul");
-      sidebarMenu.id = "mainMenu";
-      sidebarMenu.appendChild(suspendedListItem);
-      sidebarMenu.appendChild(manage4473ListItem);
+      // sidebarMenu = document.createElement("ul");
+      // sidebarMenu.id = "mainMenu";
+      // sidebarMenu.appendChild(suspendedListItem);
+      // sidebarMenu.appendChild(manage4473ListItem);
 
       // Insert the sidebar menu at the top of the body
-      document.body.prepend(sidebarMenu);
+      // document.body.prepend(sidebarMenu);
     }
   }
 
